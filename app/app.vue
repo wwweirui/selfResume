@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const publicConfig = useRuntimeConfig().public
 
-const name = publicConfig.name || '**璐'
-const phone = publicConfig.phone || '133****9192'
+const name = publicConfig.name 
+const phone = publicConfig.phone
 
 useSeoMeta({
-	title: `${name} - 前端开发实习`,
-	description: `${name}的前端开发实习简历`,
+	title: `${name} - 前端开发`,
+	description: `${name}前端开发简历`,
 	robots: 'noindex, nofollow',
 })
 </script>
@@ -21,61 +21,76 @@ useSeoMeta({
 	rounded="xl print:0"
 >
 	<h1 text="center" m="be-4">
-		{{ name }}
+		{{ `${name}-前端工程师` }}
 	</h1>
 
-	<ul columns="sm:2" p="is-0">
-		<InfoLi icon="ri:smartphone-line" label="电话">
+	<ul columns="sm:1" p="is-0">
+		<!-- <InfoLi icon="ri:smartphone-line" label="电话">
 			{{ phone }} (同微信)
+		</InfoLi> -->
+		<InfoLi icon="gravity-ui:person" label="">
+			叶伟睿 / 男 / 28岁 / 上海
+		</InfoLi>
+				
+		<InfoLi icon="icon-park-outline:phone" label="">
+			136-8708-3589
 		</InfoLi>
 
 		<InfoLi icon="ri:mail-line" label="邮箱">
-			<InfoLink to="mailto:hi@zhilu.cyou" />
+			<InfoLink to="mailto:weiruiye@foxmail.com" />
 		</InfoLi>
+		
 
-		<InfoLi icon="ri:github-line" label="GitHub">
-			<InfoLink to="https://github.com/L33Z22L11">
-				L33Z22L11
+		<!-- <InfoLi icon="ri:github-line" label="GitHub">
+			<InfoLink to="https://github.com/wwweirui">
+				wwweirui
 			</InfoLink>
-		</InfoLi>
+		</InfoLi> -->
 
-		<InfoLi icon="ri:men-line" label="性别">
-			男
-		</InfoLi>
 
-		<InfoLi icon="ri:school-line" label="学校">
-			西安邮电大学 (计算机科学与技术)
-		</InfoLi>
+		<!-- <InfoLi icon="ri:school-line" label="学校">
+			辽宁大学 (软件工程)
+		</InfoLi> -->
 
-		<InfoLi icon="ri:graduation-cap-line" label="学历">
+		<!-- <InfoLi icon="ri:graduation-cap-line" label="学历">
 			本科在读 (2026 届)
-		</InfoLi>
+		</InfoLi> -->
 	</ul>
 
-	<InfoSection title="个人技能">
+	<InfoSection title="教育背景">
 		<ul>
-			<li>掌握 Vue 3、Nuxt 4、TypeScript，熟练掌握响应式设计、UI/UX 优化</li>
-			<li>具备敏锐的用户需求感知能力，关注用户体验与可访问性</li>
-			<li>善于运用 AI 工具提升开发效能，注重代码质量与兼容性实践</li>
+			<li>硕士研究生-辽宁大学-软件工程专硕 （2019 - 2022）</li>
+			<li>本科-华东交通大学-软件工程+交通运输（2015 - 2019）</li>
 		</ul>
 	</InfoSection>
 
-	<InfoSection title="实习经历">
+	<InfoSection title="专业技能">
+		<ul>
+			<li>熟悉前端基础 HTML CSS ES6+ JS TS 语法，熟悉 HTTP 协议</li>
+			<li>掌握 Vue 3、Nuxt 4、TypeScript，熟练掌握响应式设计、UI/UX 优化</li>
+			<li>善于运用 AI 工具提升开发效能，注重代码质量与兼容性实践</li>
+			<li>软件设计师（中级）</li>
+			<li>证券从业资格证，基金从业资格证</li>
+		</ul>
+	</InfoSection>
+
+	<InfoSection title="工作经历">
 		<Project
-			name="字节跳动"
-			desc="中国商业产品与技术-巨量引擎竞价广告投放平台-前端开发"
-			from="2025.05"
+			name="德邦证券股份有限公司"
+			desc="投研科技组-前端开发"
+			from="2022.07"
 		>
 			<ul>
-				<li>“简单投”页面实现说明文案动态展示/配置能力，发现并解决投放平台十余处用户体验问题</li>
-				<li>发起静态资源治理专项，发现图文列表加载性能问题，制定报警规则多次回归线上资源问题</li>
-				<li>内网技术社区文章登日榜周榜，主讲AD技术圆桌会、商业化欢乐Talk各一期</li>
+				<li>负责并参与公司B端业务需求支持，设计技术方案，完成多版本迭代</li>
+				<li>独立完成H5项目搭建，完成项目上线</li>
+				<li>维护团队组件库，搭建文档，针对业务场景二次封装开发</li>
+				<li>知识库产出，参与团队前端规范构建，周例会知识分享</li>
 			</ul>
 		</Project>
 	</InfoSection>
 
 	<InfoSection title="项目经验">
-		<Project
+		<!-- <Project
 			name="blog-v3"
 			desc="个人博客"
 			role="创建者"
@@ -105,14 +120,8 @@ useSeoMeta({
 				<li>提升项目扩展性，针对适配 AWS S3 / 第三方 OSS 存储源时代码扩展性差的问题，重构图床存储程序定义代码，实现第三方图床存储兼容。</li>
 				<li>优化图标显示，针对 Windows 托盘图标、macOS 启动台图标比例异常问题，参考 Electron、Apple Developer 等文档规范，使用原型设计工具绘制图标并调整逻辑，实现多系统、多颜色模式下托盘、桌面图标完美显示。</li>
 			</ul>
-		</Project>
+		</Project> -->
 	</InfoSection>
 
-	<InfoSection title="个人证书">
-		<ul>
-			<li>CET-4、CET-6</li>
-			<li>中国大学生计算机设计大赛西北赛区二等奖</li>
-		</ul>
-	</InfoSection>
 </article>
 </template>
